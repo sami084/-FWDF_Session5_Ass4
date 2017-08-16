@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+		<body>
+		<p><strong> Emplyee details: </strong> </p>
+        
+		<p id="demo"> </p>
+        <p><strong> Emplyee details after changing the basic salary: </strong> </p>
+        <p id="demo1"> </p>
+
+		<script>
+		 
+		//object constructor for the Employee with properties username, Skills, and basic salary
+		function employee(username, skills, basicSalary){
+    	this.username = username;
+    	this.skills = skills;
+    	this.basicSalary = basicSalary;
+		
+		//object methods printdetails() which will display the employee details.
+		this.printdetails = function(){
+		return "Employee's username is \n" + this.username + ",\n his/her skills are \n" + this.skills + " and basic salary is "+ this.basicSalary +".";	};
+		
+		//object methods changeSalary () which will update the salary of the salary of the employee
+		this.changeSalary = function(x){
+		this.basicSalary=x;
+		};
+		}
+		
+		var emp = new employee("Abdus", "JS C# .Net", "18000");
+		
+		// display of employee details before chaning of salary 
+		document.getElementById("demo").innerHTML = emp.printdetails();
+		
+		//updating the salary of employee 
+		emp.changeSalary("20000"); 
+		
+		// display of employee details after updating the salary
+		document.getElementById("demo1").innerHTML = emp.printdetails();
+		
+        </script>
+
+		</body>
+</html>
