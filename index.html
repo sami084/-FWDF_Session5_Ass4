@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html>
+		<head>
+		<title> Object Constructor</title>
+		</head>			
 		<body>
+		<!-- Display of employee details -->
 		<p><strong> Emplyee details: </strong> </p>
-        
-		<p id="demo"> </p>
-        <p><strong> Emplyee details after changing the basic salary: </strong> </p>
-        <p id="demo1"> </p>
-
+       		<p id="demo"> </p>
+		<!-- Display of employee details after updating the salary -->
+        	<p><strong> Emplyee details after changing the basic salary: </strong> </p>
+       		<p id="demo1"> </p>
+	
 		<script>
 		 
 		//object constructor for the Employee with properties username, Skills, and basic salary
 		function employee(username, skills, basicSalary){
-    	this.username = username;
-    	this.skills = skills;
-    	this.basicSalary = basicSalary;
+    		this.username = username;
+    		this.skills = skills;
+    		this.basicSalary = basicSalary;
 		
 		//object methods printdetails() which will display the employee details.
 		this.printdetails = function(){
@@ -35,8 +39,7 @@
 		
 		// display of employee details after updating the salary
 		document.getElementById("demo1").innerHTML = emp.printdetails();
-		
-        </script>
+		</script>
 
 		</body>
 </html>
